@@ -6,7 +6,7 @@ namespace hku {
     class Project {
         public:
             Project();
-            void addSnapshot(std::unique_ptr<hku::Snapshot>& snapshot);
+            void addSnapshot(const std::string& description);
             float getProgress();
             void setProgress(const float value);
             const std::vector<std::unique_ptr<hku::Snapshot>>& getSnapshots() {

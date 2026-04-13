@@ -35,11 +35,11 @@ int main() {
             if (choice == "a" && energy >= 40) {
                 energy -= 40;
                 project.setProgress(project.getProgress() + 0.1f);
-                std::unique_ptr<hku::Snapshot> snapshot = std::make_unique<hku::Snapshot>();
+                std::string description = "";
                 std::cout << "What did you code for the project? ";
                 std::cin.ignore(); // Remove the spare newline character from the input buffer
-                std::getline(std::cin, snapshot->description);
-                project.addSnapshot(snapshot);
+                std::getline(std::cin, description);
+                project.addSnapshot(description);
             } else if (choice == "b" && energy >= 10) {
                 totalEnergyDrinks++;
                 if (totalEnergyDrinks > MAX_ENERGY_DRINKS) {
@@ -48,11 +48,11 @@ int main() {
                 }
                 energy -= 10;
                 project.setProgress(project.getProgress() + 0.12f);
-                std::unique_ptr<hku::Snapshot> snapshot = std::make_unique<hku::Snapshot>();
+                std::string description = "";
                 std::cout << "What did you code for the project? ";
                 std::cin.ignore(); // Remove the spare newline character from the input buffer
-                std::getline(std::cin, snapshot->description);
-                project.addSnapshot(snapshot);
+                std::getline(std::cin, description);
+                project.addSnapshot(description);
             } else if (choice == "c") {
                 energy += 30;
                 if (energy > MAX_ENERGY) {

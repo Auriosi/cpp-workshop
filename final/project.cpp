@@ -7,8 +7,10 @@ hku::Project::Project() {
     this->snapshots = std::vector<std::unique_ptr<hku::Snapshot>>();
 }
 
-void hku::Project::addSnapshot(std::unique_ptr<hku::Snapshot>& snapshot) {
-    this->snapshots.push_back(std::move(snapshot));
+void hku::Project::addSnapshot(const std::string& description) {
+    this->snapshots.push_back(std::make_unique<hku::Snapshot>());
+    this->snapshots.back()->description = description;
+    return;
 }
 
 float hku::Project::getProgress() {
