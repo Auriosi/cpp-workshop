@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.10)
+project (cpp_workshop)
+set(CMAKE_CXX_STANDARD 20)
+add_executable(cpp_workshop)
+target_sources(cpp_workshop PRIVATE main.cpp project.cpp project.hpp snapshot.hpp)
