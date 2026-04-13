@@ -53,3 +53,5 @@ Save yourself hours of searching for bugs during the 2:00 AM slump.
     [LearnCPP.com](https://www.learncpp.com/): The single best resource for looking up syntax and best practices.
 
     [CppReference](https://en.cppreference.com/w/cpp): The "Encyclopedia" of C++. Use this when you need to know exactly how a specific function (like std::vector) works.
+
+    [CMake Tutorial](https://cmake.org/cmake/help/latest/guide/tutorial/index.html): The official guide to CMake. It’s a bit dense, but it’s the best way to learn how to manage your build system effectively.
